@@ -10,9 +10,9 @@
 // // Sample Output:
 // 1;
 {
-function wordCount(word:string,s:string):any{
-    let c=0;
-    let wordArray = word.toLowerCase().split(" ");
+function wordCount(word:string,s:string):number[]{
+    let c:number = 0;
+    let wordArray:string[] = word.toLowerCase().split(" ");
     return wordArray.map(d=>{
         if(d===s.toLowerCase()){c=c+1;}
         return c;
@@ -20,6 +20,6 @@ function wordCount(word:string,s:string):any{
 }
 
 const result = wordCount("I love typescript love","Love");
-const len = result.length;
+const len:number = result.length;
 console.log(result[len-1]);
 }
